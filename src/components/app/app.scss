@@ -1,0 +1,44 @@
+.app {
+	display: grid;
+	grid: "header" 100px "content" calc(100vh - 275px) "footer" 175px;
+	width: 100%;
+	transition: backdrop-filter 1s ease-in;
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: auto;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+	}
+	
+	@media (min-width: 1500px) {
+		.container {
+			max-width: 1400px;
+		}
+	}
+	
+	@media (min-width: 1800px) {
+		.container {
+			max-width: 1700px;
+		}
+	}
+
+	&.sentinels-theme {
+		*, *:before, *:after {
+			cursor: url(/assets/textures/sentinels-cursor.png) 7 2, auto;
+		}
+	}
+
+	&.scourge-theme {
+		*, *:before, *:after {
+			cursor: url(/assets/textures/scourge-cursor.png) 7 2, auto;
+		}
+	}
+
+	&.dark-backdrop {
+		backdrop-filter: brightness(50%);
+	}
+}

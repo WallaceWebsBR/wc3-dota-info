@@ -1,0 +1,74 @@
+.hero-talent-tree {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: .25rem;
+	margin: .25rem 0;
+
+	// Talent Tree icon from OpenDota, minified and also set the opacity to 25%
+	// https://github.com/odota/web/blob/master/public/assets/images/dota2/talent_tree.svg
+	background: url(/assets/textures/talent-tree.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	.talent-branches {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+		gap: .5rem;
+		align-items: center;
+		min-height: 3rem;
+		padding: .5rem;
+		clip-path: inset(0 0 0 0 round .75rem);
+
+		.talent-level {
+			display: flex;
+			background: rgba(0, 0, 0, .75);
+			justify-content: center;
+			align-items: center;
+			border: gray solid;
+			border-radius: 50%;
+			padding: 1rem;
+			color: #fff;
+			height: 2.5rem;
+			width: 2.5rem;
+			order: 2;
+			font-size: 1.25rem;
+		}
+
+		.left-branch, .right-branch {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 1rem;
+			height: 100%;
+			word-break: break-word;
+		}
+
+		.left-branch:hover, .right-branch:hover {
+			color: gold
+		}
+	
+		.left-branch {
+			order: 1;
+		}
+	
+		.right-branch {
+			order: 3;
+		}
+	}
+
+	.talent-branches:hover > .talent-level {
+		box-shadow: 0 0 6px 1px gold;
+		color: gold;
+	}
+
+	.talent-branches:nth-child(even) {
+		background-color: rgba(0, 0, 0, .5);
+	}
+	
+	.talent-branches:hover {
+		background-color: rgba(160, 160, 115, .25);
+	}
+}
+

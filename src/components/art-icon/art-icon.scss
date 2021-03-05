@@ -1,0 +1,45 @@
+.icon-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 64px;
+	height: 64px;
+	background-color: black;
+
+	&:hover:after {
+		position: absolute;
+		width: 64px;
+		height: 64px;
+		pointer-events: none;
+		display: block;
+		content: '';
+	}
+
+	.icon:active {
+		width: 61px;
+		height: 61px;
+	}
+
+	&.selected:after {
+		position: absolute;
+		width: 64px;
+		height: 64px;
+		pointer-events: none;
+		display: block;
+		box-shadow: inset 0 0 16px gold;
+		content: '';
+	}
+}
+
+.sentinels-theme {
+	.icon-container:not(.selected):hover:after {
+		box-shadow: inset 0 0 16px #3eb164;
+	}
+}
+
+.scourge-theme {
+	.icon-container:not(.selected):hover:after {
+		box-shadow: inset 0 0 16px #833eb1;
+	}
+}

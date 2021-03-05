@@ -1,0 +1,45 @@
+html {
+	/* Check if user has Friz Quadrata first then default to the free Quadrat Serial */
+	font: 16px 'Friz Quadrata TT', /* 'Quadrat Serial Regular',*/ 'sans-serif';
+	color: white;
+	box-sizing: border-box;
+	background: 
+		// linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+		url(/assets/textures/dota-loadscreen-by-su-ke.jpg);
+	background-position: center 5%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-shadow: 0px 0px 4px #000;
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+}
+
+/*
+@font-face {
+	font-family: 'Quadrat Serial Regular';
+	font-weight: normal;
+	font-style: normal;
+	src:
+		url(/assets/fonts/quadrat-serial/font.woff2) format('woff2'), 
+		url(/assets/fonts/quadrat-serial/font.woff) format('woff');
+}
+*/
+
+@font-face {
+	font-family: 'Friz Quadrata TT';
+	src:
+		local(Friz Quadrata TT) format('truetype'),
+		url(/assets/fonts/friz-quadrata-tt/font.woff2) format('woff2'),
+		url(/assets/fonts/friz-quadrata-tt/font.woff) format('woff');
+}

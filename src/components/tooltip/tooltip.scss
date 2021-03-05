@@ -1,0 +1,38 @@
+.tooltip {
+	display: none;
+	padding: 3px 5px;
+	border: 4px solid;
+	white-space: pre-wrap;
+	border-image-source: url(/assets/textures/tooltip-border.png);
+  border-image-slice: 10;
+  border-image-width: 10px;
+
+	// The actual alpha value of the WC3 tooltip background is 0.76
+	// I changed to 0.9 to make it easier to read when it gets to text-ey beneath
+	// background-color: rgba(24, 34, 49, 0.76); 
+	background-color: rgba(24, 34, 49, 0.9); 
+	background-clip: padding-box;
+	// backdrop-filter: blur(4px);
+
+	&.tooltip-visible {
+		display: block;
+	}
+
+	.tooltip-title {
+		margin-bottom: .25rem;	
+	}
+
+	.tooltip-hotkey {
+		color: gold;
+	}
+	
+	.tooltip-resource {
+		margin-bottom: .25rem;	
+		color: gold;
+	
+		> .resource-icon {
+			height: 0.8em;
+			vertical-align: baseline;
+		}
+	}
+}

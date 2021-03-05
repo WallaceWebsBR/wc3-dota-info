@@ -1,0 +1,10 @@
+.viewer-controls {
+	display: flex;
+	flex-direction: row;
+	gap: 0.25rem;
+	margin-top: 0.25rem;
+	
+	.options-select {
+		flex: 1;
+	}
+}

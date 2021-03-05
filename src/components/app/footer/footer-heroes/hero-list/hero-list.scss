@@ -1,0 +1,36 @@
+.icon-list-container {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	width: inherit;
+	overflow-x: auto;
+	overflow-y: hidden;	
+	
+	.icon-group:first-child {
+		padding-left: calc(50% - 32px)
+	}
+
+	.icon-group:last-child {
+		padding-right: calc(50% - 32px)
+	}
+}
+
+.icon-list {
+	display: flex;
+	// flex-wrap: nowrap;
+	align-items: flex-end;
+	gap: 4px;
+}
+
+.icon-group {
+	display: flex;
+	flex-direction: column;
+	height: 100px;
+
+	.icon-group-title {
+		font-size: 1.25em;
+		margin-bottom: 2px;
+
+		white-space: nowrap;
+	}
+}

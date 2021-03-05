@@ -1,0 +1,13 @@
+.github-link-button {
+	display: flex;
+	position: relative;
+	flex-direction: row-reverse;
+	align-items: center;
+	
+	.options-button:hover + .tooltip {
+		display: inline-flex;
+		position: absolute;
+		top: 60px;
+		white-space: nowrap;
+	}
+}

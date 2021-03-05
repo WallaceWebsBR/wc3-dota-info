@@ -1,0 +1,54 @@
+.footer {
+	@keyframes slide-from-bottom {
+		0% {
+			transform: translateY(100%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	animation: 1.25s ease-in-out 0s 1 slide-from-bottom;
+	border-style: solid;
+	border-width: 32px 0 0 0;
+  border-image-slice: 62;
+  border-image-width: 39px 0 0 0;
+  border-image-outset: 0;
+	border-image-repeat: repeat;
+	background-color: rgba(0, 0, 0, 1);
+	background-repeat: repeat;
+	background-clip: padding-box;
+	padding: 6px;
+	height: 175px;
+	bottom: 0;
+	// position: fixed;
+	width: 100vw;
+	color: white;
+	// z-index: 1;
+	
+	.tooltip {
+		position: absolute;
+		right: max(((100vw - 1400px) / 2), 0.5rem);
+		bottom: 140px;
+		width: 400px;
+		z-index: 2;
+
+		@media (min-width: 1800px) {
+			right: max(((100vw - 1700px) / 2), 0.5rem);
+		}
+	}
+}
+
+.sentinels-theme {
+	.footer {
+		border-image-source: url(/assets/textures/sentinels-cinematic-border-bottom.png);
+		background-image: url(/assets/textures/sentinels-esc-menu-bg.png);
+	}
+}
+
+.scourge-theme {
+	.footer {
+		border-image-source: url(/assets/textures/scourge-cinematic-border-bottom.png);
+		background-image: url(/assets/textures/scourge-esc-menu-bg.png);
+	}
+}

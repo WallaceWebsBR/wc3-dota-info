@@ -1,0 +1,112 @@
+.options-button {
+	display: flex;
+	color: gold;
+	align-items: center;
+	justify-content: center;
+	border: 8px solid;
+	border-image: url(/assets/textures/button-border-up.png) 16 / 16px / 4px repeat;
+	background-clip: border-box;
+	user-select: none;
+	font-size: 1.2em;
+	padding: 4px;
+
+	.options-button-hotkey {
+		color: white
+	}
+
+	svg path {
+		fill: gold;
+	}
+
+	&.disabled {
+		color: gray;
+	}
+
+	&:focus {
+		outline-width: 0;
+	}
+
+	&:not(.disabled) {
+		&:hover {
+			background-image: 
+				radial-gradient(rgba(58, 105, 28, 1), transparent), 
+				url(/assets/textures/sentinels-options-button-up-bg.png);
+		}
+	
+		&:active {
+			border-image-source: url(/assets/textures/button-border-down.png);
+			background-image: url(/assets/textures/sentinels-options-button-down-bg.png);
+			padding: 8px 0px 0px 8px;
+			color: white;
+			
+			svg path {
+				fill: white;
+			}
+		}
+	
+		&:hover:active {
+			background-image: 
+				radial-gradient(rgba(58, 105, 28, 1), rgba(58, 105, 28, 0)), 
+				url(/assets/textures/sentinels-options-button-down-bg.png);
+		}
+	}
+
+}
+
+a.options-button  {
+	text-decoration: none;
+}
+
+.scourge-theme {
+	.options-button {
+		background-image: url(/assets/textures/scourge-options-button-up-bg.png);
+
+		&:not(.disabled) {
+			&:hover {
+				background-image: 
+					radial-gradient(rgb(95, 20, 102), transparent), 
+					url(/assets/textures/scourge-options-button-up-bg.png);
+			}
+		
+			&:active {
+				background-image: linear-gradient(black, black);
+			}
+		
+			&:hover:active {
+				background-image: radial-gradient(rgb(95, 20, 102), rgb(0, 0, 0))
+			}
+		}
+
+		&.disabled {
+			background-image: url(/assets/textures/scourge-options-button-bg-disabled.png);
+		}
+	}
+}
+
+.sentinels-theme {
+	.options-button {
+		background-image: url(/assets/textures/sentinels-options-button-up-bg.png);
+
+		&:not(.disabled) {
+			&:hover {
+				background-image: 
+					radial-gradient(rgba(58, 105, 28, 1), rgba(58, 105, 28, 0)), 
+					url(/assets/textures/sentinels-options-button-up-bg.png);
+			}
+		
+			&:active {
+				background-image: url(/assets/textures/sentinels-options-button-down-bg.png);
+			}
+		
+			&:hover:active {
+				background-image: 
+					radial-gradient(rgba(58, 105, 28, 1), rgba(58, 105, 28, 0)), 
+					url(/assets/textures/sentinels-options-button-down-bg.png)
+			}
+		}
+
+		&.disabled {
+			background-image: url(/assets/textures/sentinels-options-button-bg-disabled.png);
+		}
+	}
+}

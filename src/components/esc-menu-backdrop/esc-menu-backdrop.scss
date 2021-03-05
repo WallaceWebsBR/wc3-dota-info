@@ -1,0 +1,53 @@
+.esc-menu-backdrop {
+	--scroll-track-color: rgba(0, 0, 0, 0.1);
+	--scroll-thumb-color: rgba(0, 0, 0, 0.4);
+
+	padding: 1rem;
+	border: 2rem solid;
+  border-image-slice: 64;
+  border-image-width: 4rem;
+  border-image-outset: 0;
+	border-image-repeat: round;
+	background-repeat: repeat;
+	background-clip: padding-box;
+	color: white;
+	min-height: calc(100vh - 275px);
+	width: 100%;
+	height: 100%;
+
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color);
+	}
+	
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background-color: var(--scroll-track-color);
+		box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.75);
+	}
+	
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: var(--scroll-thumb-color);
+		box-shadow: inset 0 0 6px var(--scroll-thumb-color);
+	}
+}
+
+.sentinels-theme {
+	.esc-menu-backdrop {
+		border-image-source: url(/assets/textures/sentinels-esc-menu-border.png);
+		background-image: url(/assets/textures/sentinels-esc-menu-bg.png);
+		border-bottom: 1.5rem solid;
+	}
+}
+
+.scourge-theme {
+	.esc-menu-backdrop {
+		border-image-source: url(/assets/textures/scourge-esc-menu-border.png);
+		background-image: url(/assets/textures/scourge-esc-menu-bg.png);
+	}
+}

@@ -1,0 +1,65 @@
+.header {
+	@keyframes slide-from-top {
+		0% {
+			transform: translateY(-100%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	animation: 1.25s ease-in-out 0s 1 slide-from-top;
+	border-style: solid;
+	
+  border-image-slice: 62;
+  border-image-width: 0 0 32px 0;
+  border-image-outset: 0;
+	border-image-repeat: repeat;
+
+	background-color: rgba(0, 0, 0, 1);
+	background-repeat: repeat;
+	background-clip: padding-box;
+
+	height: 100px;
+	top: 0;
+	width: 100vw;
+	color: white;
+	z-index: 1;
+
+	.container {
+		padding: 6px;
+	}
+
+	.title {
+		font-size: 2rem;
+		transition: text-shadow 250ms ease;
+	}
+	
+	.title:hover {
+		text-shadow: 0px 0px 6px rgb(0, 0, 0), 0px 0px 24px rgb(99, 158, 212);
+	}
+	
+	.group {
+		display: flex;
+		gap: 1rem;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.sentinels-theme {
+	.header {
+		border-image-source: url(/assets/textures/sentinels-cinematic-border-top.png);
+		background-image: url(/assets/textures/sentinels-esc-menu-bg.png);
+		border-width: 0 0 24px 0;
+	}
+}
+
+.scourge-theme {
+	.header {
+		border-image-source: url(/assets/textures/scourge-cinematic-border-top.png);
+		background-image: url(/assets/textures/scourge-esc-menu-bg.png);
+		border-width: 0 0 28px 0;
+	}
+}

@@ -1,0 +1,28 @@
+.hero-search {
+	label {
+		font-size: 1.125rem;
+		margin-bottom: .25rem;
+		margin-left: .125rem;
+		color: white;
+	}
+	
+	input[type=search] {
+		font: 16px 'Friz Quadrata TT', 'Quadrat Serial Regular', 'sans-serif';
+		border-image-source: url(/assets/textures/tooltip-border.png);
+		border-image-slice: 10;
+		border-image-width: 10px;
+		background-color: rgba(24, 34, 49, 0.76); 
+		background-clip: padding-box;
+		padding: 6px;
+		color: white;
+		width: 100%;
+		
+		&:focus {
+			outline-width: 0;
+		}
+
+		&::-webkit-search-cancel-button{
+			cursor: url(/assets/textures/sentinels-cursor.png) 7 2, auto;
+		}
+	}
+}

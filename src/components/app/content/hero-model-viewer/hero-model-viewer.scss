@@ -1,0 +1,14 @@
+.hero-model-viewer {	
+	.editbox-backdrop {
+		padding: 0;
+		
+		.canvas-container {
+			display: flex;
+		}
+	}
+
+	.viewer-controls {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
