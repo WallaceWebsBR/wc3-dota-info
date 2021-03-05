@@ -5,7 +5,6 @@ module.exports = {
     src: {url: '/dist'},
   },
   plugins: [
-    '@snowpack/plugin-webpack', 
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-sass',
     '@prefresh/snowpack'
