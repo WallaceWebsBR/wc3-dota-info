@@ -10,7 +10,7 @@ You can view a demo deployed on Netlify here: https://wc3-dota-info.netlify.app/
 
 Run `npm install` once first.
 
-1. Start up a [resource server](http://github.com) to fetch resources from. Its endpoint must match the set `SNOWPACK_PUBLIC_RESOURCE_SERVER` environment variable on the host, or at the `.env` file if you are just running locally.
+1. Start up a [resource server](https://github.com/jp06/wc3-dota-info-api) to fetch resources from. Its endpoint must match the set `SNOWPACK_PUBLIC_RESOURCE_SERVER` environment variable on the host. If you're running on a local environment, you don't need to change anything because it is set to `http://localhost:4000` by default at the `.env` file.
 2. Run `npm start` to run the app in development mode. Open http://localhost:8080 to view it in the browser.
 
 ## Building
