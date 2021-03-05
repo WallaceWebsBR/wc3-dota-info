@@ -13,7 +13,7 @@ const OptionsButton = ({ children, hotkey, href = null, disabled = false, ...oth
 	] : children;
 
 	return href
-		?	<a class={`options-button ${disabled && "disabled"}`} href="#" target="_blank" {...otherProps}>
+		?	<a class={`options-button ${disabled && "disabled"}`} href={href} target="_blank" {...otherProps}>
 				{contents}
 			</a>
 		: <button class={`options-button ${disabled && "disabled"}`} {...otherProps}>
