@@ -1,6 +1,10 @@
 # WC3 DotA Info
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47086135-bad0-4788-b17a-600e461faac6/deploy-status)](https://app.netlify.com/sites/wc3-dota-info/deploys)
+
 A single-page web app containing info on WarCraft III DotA. Currently only has data for heroes. This is the front end part of the website.
+
+You can view a demo deployed on Netlify here: https://wc3-dota-info.netlify.app/
 
 ## How to use
 
