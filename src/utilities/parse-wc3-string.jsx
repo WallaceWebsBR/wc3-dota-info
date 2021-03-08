@@ -34,7 +34,7 @@ export default function parseWC3String(input) {
 						if (input[i] === 'c' || input[i] === 'r' || i === input.length) {
 							output.push(
 								<span style={{ color: `#${rgbHex}` }}>
-									{colorTagContents.map((e) => e).join('')}
+									{colorTagContents}
 								</span>
 							);
 
