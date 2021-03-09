@@ -49,7 +49,7 @@ async function preloadImages () {
     "tooltip-mana.png"
   ]
 
-  for (image of imagesToPreload) {
+  for (const image of imagesToPreload) {
     await loadImage("/assets/textures" + image)
   }
 }
