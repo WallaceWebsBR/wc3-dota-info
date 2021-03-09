@@ -22,6 +22,7 @@ export default function parseWC3String(input) {
 				output.push(<br />);
 				i++;
 			}
+
 			else if (input[i] === 'c') {
 				const colorTagContents = [], rgbHex = input.slice(i + 3, i += 9);
 				let inlineText = '', insideAColorTag = true;
@@ -29,6 +30,7 @@ export default function parseWC3String(input) {
 				while (insideAColorTag) {
 					if (input[i] === '|' || i === input.length - 1) {
 						if (inlineText) colorTagContents.push(inlineText);
+
 						i++;
 						
 						if (input[i] === 'c' || input[i] === 'r' || i === input.length) {
@@ -41,12 +43,15 @@ export default function parseWC3String(input) {
 							insideAColorTag = false;
 							i = input[i] === 'r' ? ++i : --i;
 						}
+
 						else if (input[i] === 'n') {
 							colorTagContents.push(<br />);
 							inlineText = '';
 							i++;
 						}
-					} else {
+					} 
+					
+					else {
 						inlineText += input[i++];
 					}
 				}
