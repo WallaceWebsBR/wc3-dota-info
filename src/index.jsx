@@ -50,7 +50,7 @@ async function preloadImages () {
   ]
 
   for (const image of imagesToPreload) {
-    await loadImage("/assets/textures" + image)
+    await loadImage("/assets/textures/" + image)
   }
 }
 
