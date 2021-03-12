@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { useRef, useEffect, useState } from 'preact/hooks';
 
-import ModelViewer from 'mdx-m3-viewer';
+import ModelViewer from 'mdx-m3-viewer/dist/viewer'
 
 import EditBoxBackdrop from "../../../edit-box-backdrop"
 import ViewerControls from './viewer-controls'
