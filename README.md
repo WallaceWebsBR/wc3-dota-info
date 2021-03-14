@@ -27,3 +27,4 @@ Run `npm run build` for building the app for production to the `build/` folder. 
 
 * [flowtsohg (GhostWolf)](https://github.com/flowtsohg) - I used his [mdx-m3-viewer](https://github.com/flowtsohg/mdx-m3-viewer) library for the model viewer.
 * [d07RiV](https://github.com/d07RiV) - I took some reference from his [wc3data](https://github.com/d07RiV/wc3data)'s model viewer code on how to set the camera to portrait view.
+* [Suke](https://twitter.com/Sukeart) - I used as background his [art here](https://www.deviantart.com/su-ke/art/Dota-1-320811752) which was also used as the loading screen in versions 6.76 to 6.83d.
