@@ -7,8 +7,9 @@ import './options-select.scss';
 
 const OptionsSelect = ({ options = [], label, valueIndex, setValueIndex, disabled = false }) => {
 	const [ isOpen, setIsOpen ] = useState(false);
-
+	
 	const optionsListRef = useRef(null);
+	const customSelectRef = useRef(null);
 
 	const handleTriggerClick = () => {
 		if (!disabled) setIsOpen(!isOpen)
@@ -20,8 +21,8 @@ const OptionsSelect = ({ options = [], label, valueIndex, setValueIndex, disable
 	}
 
 	const handleOutsideEvent = (event) => {
-		if (optionsListRef.current) {
-			const isEventInside = optionsListRef.current.contains(event.target);
+		if (customSelectRef.current) {
+			const isEventInside = customSelectRef.current.contains(event.target);
 			if (!isEventInside) {
 				setIsOpen(false)
 			}
@@ -30,7 +31,7 @@ const OptionsSelect = ({ options = [], label, valueIndex, setValueIndex, disable
 
 	useEffect(() => {
 		if (isOpen) {
-			const wrapper = optionsListRef.current.parentNode
+			const wrapper = customSelectRef.current
 			const wrapperBounds = wrapper.getBoundingClientRect()
 			
 			optionsListRef.current.style.top = wrapperBounds.bottom + "px"
@@ -85,7 +86,7 @@ const OptionsSelect = ({ options = [], label, valueIndex, setValueIndex, disable
 				))
 			}
 			</select>
-			<div class="options-select-custom">
+			<div class="options-select-custom" ref={customSelectRef}>
 				<div class="options-select-trigger" onclick={handleTriggerClick}>
 					<div>{options[valueIndex]}</div>
 				</div>
