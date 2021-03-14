@@ -5,7 +5,7 @@
     "test": "web-test-runner \"src/**/*.test.jsx\""
   },
   "dependencies": {
-    "mdx-m3-viewer": "github:jp06/mdx-m3-viewer",
+    "mdx-m3-viewer": "github:jp06/mdx-m3-viewer#a1c6fa4efc6d1d98c3c26da5409fde070495683a",
     "preact": "^10.0.0"
   },
   "devDependencies": {
