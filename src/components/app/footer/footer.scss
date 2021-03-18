@@ -10,9 +10,7 @@
 
 	animation: 1.25s ease-in-out 0s 1 slide-from-bottom;
 	border-style: solid;
-	border-width: 32px 0 0 0;
   border-image-slice: 62;
-  border-image-width: 39px 0 0 0;
   border-image-outset: 0;
 	border-image-repeat: repeat;
 	background-color: rgba(0, 0, 0, 1);
@@ -43,6 +41,8 @@
 	.footer {
 		border-image-source: url(/assets/textures/sentinels-cinematic-border-bottom.png);
 		background-image: url(/assets/textures/sentinels-esc-menu-bg.png);
+		border-image-width: 39px 0 0 0;
+		border-width: 32px 0 0 0;
 	}
 }
 
@@ -50,5 +50,7 @@
 	.footer {
 		border-image-source: url(/assets/textures/scourge-cinematic-border-bottom.png);
 		background-image: url(/assets/textures/scourge-esc-menu-bg.png);
+		border-image-width: 34px 0 0 0;
+		border-width: 30px 0 0 0;
 	}
 }
