@@ -131,7 +131,6 @@ const HeroModelViewer = ({ modelParams, mapVersion, sceneColor }) => {
 						
 						instance.resetTransformation()
 						instance.setSequence(portraitSequence === -1 ? 0 : portraitSequence)
-						instance.recalculateTransformation()
 
 						scene.camera.perspective(scalableFoV, aspectRatio, nearClippingPlane, farClippingPlane)
 						scene.camera.moveToAndFace(position, targetPosition, [0, 0, 1])
