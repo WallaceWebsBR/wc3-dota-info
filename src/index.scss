@@ -39,7 +39,7 @@ body {
 @font-face {
 	font-family: 'Friz Quadrata TT';
 	src:
-		local(Friz Quadrata TT) format('truetype'),
+		local(Friz Quadrata TT),
 		url(/assets/fonts/friz-quadrata-tt/font.woff2) format('woff2'),
 		url(/assets/fonts/friz-quadrata-tt/font.woff) format('woff');
 }
